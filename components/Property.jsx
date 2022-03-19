@@ -29,15 +29,13 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
                                 <img src={agency?.logo?.url} alt="agency" className="w-1/3 ml-auto" />
                             </div>
                         </div>
-                        <div className="flex items-center p-1 justify-between w-60 text-blue-400">
+                        <div className="flex items-center p-1 justify-between w-3/4 text-blue-400">
                             {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
                         </div>
                         <p className="text-lg">
-                            {title.length > 30 ? `${title.substring(0, 30)}...` : title}
-
+                            {title.length > 35 ? `${title.substring(0, 35)}...` : title}
                         </p>
                     </div>
-
                 </div>
             </Link>
         </>
