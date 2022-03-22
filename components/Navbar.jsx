@@ -1,5 +1,5 @@
 import Link from "next/link";
-import logo from '../assets/images/logo2.png'
+import logo from '../assets/images/logo6.png'
 import Image from "next/image";
 import { useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi'
@@ -14,8 +14,8 @@ const Navbar = () => {
 
 
     return (
-        <div className="flex justify-between items-center  px-6 bg-slate-800 text-white">
-            <div className="logo bg-white ml-4">
+        <div className="flex justify-between items-center  px-6 sm:pr-0 bg-slate-800 text-white">
+            <div className="logo ml-4 flex-1 flex justify-start items-center">
                 <Image src={logo} width={50} height={50} />
             </div>
             <div className="menu hidden md:flex items-center text-lg">
@@ -40,7 +40,7 @@ const Navbar = () => {
                 }
                 {toggle && (
                     <ul className=' fixed top-0 -right-2 p-4 text-white w-[70vw]  shadow-2xl md:hiden list-none
-                    flex flex-col justify-start items-center rounded-md animate-slide-in bg-slate-700'>
+                    flex flex-col justify-start  sm:items-center rounded-md animate-slide-in bg-slate-700'>
                         <li className='text-xl mt-2 my-2'>
                             <AiOutlineClose onClick={() => setToggle(false)} />
                         </li>
