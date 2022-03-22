@@ -23,7 +23,7 @@ const Search = ({ properties }) => {
             <p className="text-2xl text-center my-6 font-bold">
                 Properties {router.query.purpose}
             </p>
-            <div className="grid grid-cols-1 sm:grid-col-2 md:grid-cols-3 p-10 gap-2 mx-auto" style={{ maxWidth: '1200px' }}>
+            <div className="grid grid-cols-1 sm:grid-col-2 md:grid-cols-3 gap-2 mx-auto" style={{ maxWidth: '1200px' }}>
                 {properties.map((property) => <Property property={property} key={property.id} />)}
             </div>
             {properties.length === 0 && (

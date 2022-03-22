@@ -17,7 +17,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
 
                     <div className="w-full shadow-2xl rounded-3xl -mt-12 bg-white z-10 p-3 " style={{ maxWidth: '400px' }}>
                         <div className="flex pt-2 items-center justify-between">
-                            <div className="flex flex-2 items-center mb-6">
+                            <div className="flex flex-2 items-center justify-center mb-6">
                                 <div className="pr-3 text-green-400">
                                     {isVerified && <GoVerified />}
                                 </div>
@@ -26,11 +26,11 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
                                 </p>
                             </div>
                             <div className="flex-1">
-                                <img src={agency?.logo?.url} alt="agency" className="w-1/3 ml-auto" />
+                                <img src={agency?.logo?.url} alt="agency" className="w-1/4 ml-auto" />
                             </div>
                         </div>
-                        <div className="flex items-center p-1 justify-between  text-blue-400">
-                            {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
+                        <div className="flex items-center p-1 justify-between text-orange-500">
+                            <div className="flex items-center justify-center">{rooms} <FaBed className="ml-3" /></div> | <div className="flex items-center justify-center">{baths} <FaBath className="ml-3" /></div> |<div className="flex items-center justify-center"> {millify(area)} sqft <BsGridFill className="ml-3" /></div>
                         </div>
                         <p className="">
                             {title.length > 35 ? `${title.substring(0, 35)}...` : title}
