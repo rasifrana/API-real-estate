@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
             <Head>
                 <title>AR Real Estate</title>
             </Head>
-            <div className="max-width m-auto">
+            <div className="">
                 <header>
                     <Navbar />
                 </header>

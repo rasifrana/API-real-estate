@@ -7,7 +7,7 @@ import Features from "../components/Features";
 
 const Banner = ({ purpose, imageUrl, title1, title2, desc1, desc2, linkName, buttonText }) => {
   return (
-    <div className=" px-4 py-20 bg-slate-700 w-4/5 rounded-r-3xl mb-12 text-white">
+    <div className=" px-4 md:py-20 bg-slate-700 w-4/5 rounded-r-3xl mb-12 text-white">
       <div className="flex  justify-start items-center m-10">
         <div className="hidden sm:block">
           <Image src={imageUrl} width={450} height={300} alt='banner' className="rounded-2xl" />
@@ -15,11 +15,11 @@ const Banner = ({ purpose, imageUrl, title1, title2, desc1, desc2, linkName, but
         </div>
 
         <div className="p-5 ">
-          <p className="  text-5xl font-bold">{purpose}</p>
-          <p className="text-3xl font-normal mt-4">{title1}</p>
-          <p className="text-3xl font-normal mb-4">{title2}</p>
-          <p className=" text-lg font-normal py-3">{desc1}<br />{desc2}</p>
-          <button className="text-xl p-4 bg-orange-500 mt-3 rounded-br-3xl rounded-tl-3xl text-white">
+          <p className=" text-3xl sm:text-5xl font-bold">{purpose}</p>
+          <p className="text-2xl sm:text-3xl font-normal mt-4">{title1}</p>
+          <p className="text-2xl sm:text-3xl font-normal mb-4">{title2}</p>
+          <p className=" sm:text-lg font-normal py-3">{desc1}<br />{desc2}</p>
+          <button className="sm:text-xl p-4 bg-orange-500 mt-3 rounded-br-3xl rounded-tl-3xl text-white">
             <Link href={linkName}>{buttonText}</Link>
           </button>
         </div>

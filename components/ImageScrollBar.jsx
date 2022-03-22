@@ -8,6 +8,7 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 const LeftArrow = () => {
     const { scrollPrev } = useContext(VisibilityContext);
+    console.log(scrollPrev)
 
 
     return (
@@ -19,8 +20,8 @@ const LeftArrow = () => {
                 cursor='pointer'
                 d={['none', 'none', 'none', 'block']}
             /> */}
-            <FaArrowAltCircleLeft onClick={() => scrollPrev()}
-                fontSize='20px' />
+            <FaArrowAltCircleLeft onClick={() => scrollPrev}
+                fontSize='20px' d={['none', 'none', 'none', 'block']} />
         </div>
     );
 }
@@ -37,23 +38,20 @@ const RightArrow = () => {
             cursor='pointer'
             d={['none', 'none', 'none', 'block']}
         /> */}
-            <FaArrowAltCircleRight onClick={() => scrollNext()}
-                fontSize='2xl' />
+            <FaArrowAltCircleRight onClick={() => scrollNext}
+                fontSize='2xl' d={['none', 'none', 'none', 'block']} />
         </div>
     );
 }
 
-const ImageScrollBar = ({ data }) => {
+export default function ImageSrollbar({ data }) {
     return (
-        <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{ overflow: 'hidden' }}>
+        <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{ overflow: 'hidden' }} >
             {data.map((item) => (
-                <div key={item.id} itemID={item.id} className=" overflow-hidden w-96 p-1" style={{ width: '910px' }}>
-                    <Image placeholder="blur" blurDataURL={item.url} src={item.url} width={900} height={500} sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px" />
+                <div key={item.id} className=' overflow-hidden p-1' style={{ width: '910px' }}>
+                    <Image placeholder="blur" blurDataURL={item.url} src={item.url} width={1000} height={500} sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px" className=' object-cover' />
                 </div>
-            ))
-            }
-        </ScrollMenu >
-    )
+            ))}
+        </ScrollMenu>
+    );
 }
-
-export default ImageScrollBar;

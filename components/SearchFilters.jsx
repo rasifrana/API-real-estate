@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import eana from '../assets/images/eana.jpg'
+
 
 import { filterData, getFilterValues } from '../utils/filterData';
 
