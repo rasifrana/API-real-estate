@@ -1,5 +1,5 @@
 import Link from "next/link";
-import logo from '../assets/images/logo6.png'
+import logo from '../assets/images/logo.png'
 import Image from "next/image";
 import { useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi'
