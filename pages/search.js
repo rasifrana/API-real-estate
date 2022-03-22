@@ -20,10 +20,10 @@ const Search = ({ properties }) => {
                 Search Property By Filters <BsFilter className="ml-4" />
             </div>
             {searchFilters && <SearchFilters />}
-            <p>
+            <p className="text-2xl text-center my-6 font-bold">
                 Properties {router.query.purpose}
             </p>
-            <div className="flex flex-wrap">
+            <div className="grid grid-cols-1 sm:grid-col-2 md:grid-cols-3 p-10 gap-2 mx-auto" style={{ maxWidth: '1200px' }}>
                 {properties.map((property) => <Property property={property} key={property.id} />)}
             </div>
             {properties.length === 0 && (

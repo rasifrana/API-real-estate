@@ -5,8 +5,10 @@ import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 
+
 const LeftArrow = () => {
     const { scrollPrev } = useContext(VisibilityContext);
+
 
     return (
         <div className='flex justify-center items-center mr-1'>
@@ -18,7 +20,7 @@ const LeftArrow = () => {
                 d={['none', 'none', 'none', 'block']}
             /> */}
             <FaArrowAltCircleLeft onClick={() => scrollPrev()}
-                fontSize='2xl' />
+                fontSize='20px' />
         </div>
     );
 }
@@ -41,7 +43,7 @@ const RightArrow = () => {
     );
 }
 
-const ScrollBar = ({ data }) => {
+const ImageScrollBar = ({ data }) => {
     return (
         <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{ overflow: 'hidden' }}>
             {data.map((item) => (
@@ -54,4 +56,4 @@ const ScrollBar = ({ data }) => {
     )
 }
 
-export default ScrollBar;
+export default ImageScrollBar;

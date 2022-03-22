@@ -4,13 +4,13 @@ import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
 
 import { baseUrl, fetchApi } from '../../utils/fetchApi';
-import ScrollBar from '../../components/ImageScrollBar';
+import ImageScrollBar from '../../components/ImageScrollBar';
 
 
 
 const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => (
-    <div className='max-width mx-auto'>
-        {photos && <ScrollBar data={photos} />}
+    <div className='max-width mx-auto p-4'>
+        {photos && <ImageScrollBar data={photos} />}
         <div className="w-full p-6 flex justify-between items-center3`  ">
             <div className="flex pt-2 items-center">
                 <div className="pr-3 text-lg bg-slate-100 text-green-800">
