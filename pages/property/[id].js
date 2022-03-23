@@ -3,6 +3,7 @@ import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,7 +19,7 @@ import { baseUrl, fetchApi } from '../../utils/fetchApi';
 
 
 const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => (
-    <div className='max-width mx-auto sm:p-4 p-0'>
+    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 5 }} className='max-width mx-auto sm:p-4 p-0'>
         <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -94,7 +95,7 @@ const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
 );
 
 
