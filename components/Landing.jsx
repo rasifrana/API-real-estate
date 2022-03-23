@@ -9,8 +9,8 @@ const Landing = () => {
                 <div className="content flex-1 flex justify-center items-center ">
                     <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 5 }} className=" p-16 text-center sm:text-left box-border">
                         <h3 className="text-lg mb-2 border-b-2 inline-block border-orange-500">My Properties</h3>
-                        <h1 className=" text-4xl sm:text-5xl my-10">Welcome to your next <br />amazing house</h1>
-                        <p className="mb-7 sm:text-2xl">MyRental is a Webflow Template to showcase your short or long term rental properties!</p>
+                        <h1 className=" text-4xl sm:text-5xl my-10">Welcome to your next <br />Amazing house</h1>
+                        <p className="mb-7 sm:text-2xl">Search 1000s of houses, apartments and properties for sale or to rent - from all leading estate agents.</p>
                     </motion.div>
 
                 </div>
