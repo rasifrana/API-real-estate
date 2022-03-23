@@ -39,18 +39,18 @@ const Navbar = () => {
 
                 }
                 {toggle && (
-                    <ul className=' fixed top-0 -right-2 p-4 text-white w-[70vw]  shadow-2xl md:hiden list-none
-                    flex flex-col justify-start  sm:items-center rounded-md animate-slide-in bg-slate-700'>
-                        <li className='text-xl mt-2 my-2'>
+                    <ul className=' fixed top-0 -right-2 p-4 text-white w-[70vw]  shadow-2xl md:hidden list-none
+                    flex flex-col justify-start items-center rounded-md animate-slide-in bg-slate-700 z-50'>
+                        <li className='text-xl  my-3 self-end pr-4'>
                             <AiOutlineClose onClick={() => setToggle(false)} />
                         </li>
-                        <li className="mb-2">
+                        <li className="mb-3 border-b-2">
                             <Link href="/" passHref className="p-4 rounded-md">Home</Link>
                         </li>
-                        <li className="mb-2">
+                        <li className="mb-3 border-b-2">
                             <Link href="/search?purpose=for-sale" passHref className="p-4 rounded-md">Buy Home</Link>
                         </li>
-                        <li className="mb-2">
+                        <li className="mb-3 border-b-2">
                             <Link href="/search?purpose=for-rent" passHref className="p-4 rounded-md">For Rent</Link>
                         </li>
                         <li className="item rounded-l-lg rounded-b-lg  p-2 bg-orange-600">
