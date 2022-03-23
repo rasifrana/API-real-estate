@@ -1,5 +1,5 @@
 import { AiOutlineHome } from 'react-icons/ai';
-import Swip from './Swiper';
+
 
 
 const Features = () => {
@@ -14,7 +14,7 @@ const Features = () => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-24" style={{ minHeight: '450px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-24" style={{ minHeight: '400px' }}>
                 <div className="flex flex-col justify-center items-start text-3xl">
                     <p>
                         Discover our property
@@ -24,26 +24,24 @@ const Features = () => {
                 </div>
                 <div className=" rounded-3xl overflow-hidden relative">
                     <img className="w-full object-cover h-full" src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="" />
-                    <div className=" absolute right-0 bottom-0 md:p-6 p-4 rounded-tl-3xl text-white bg-orange-500 md:text-xl">
+                    <div className=" absolute right-0 bottom-0  p-4 rounded-tl-3xl text-white bg-orange-500 md:text-xl">
                         Stunning Bedrooms
                     </div>
                 </div>
                 <div className=" rounded-3xl overflow-hidden relative">
                     <img className="w-full object-cover h-full" src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="" />
-                    <div className=" absolute right-0 bottom-0 md:p-6 p-4 rounded-tl-3xl text-white bg-orange-500 md:text-xl">
+                    <div className=" absolute right-0 bottom-0   p-4 rounded-tl-3xl text-white bg-orange-500 md:text-xl">
                         Luxurious Kitchen
                     </div>
                 </div>
                 <div className=" rounded-3xl overflow-hidden relative">
                     <img className="w-full object-cover h-full" src="https://images.unsplash.com/photo-1416331108676-a22ccb276e35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2367&q=80" alt="" />
-                    <div className=" absolute right-0 bottom-0 md:p-6 p-4 rounded-tl-3xl text-white bg-orange-500 md:text-xl">
+                    <div className=" absolute right-0 bottom-0  p-4 rounded-tl-3xl text-white bg-orange-500 md:text-xl">
                         Swimming Pools
                     </div>
                 </div>
 
             </div>
-
-            <Swip />
 
         </section>
     );
