@@ -14,7 +14,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="flex justify-between items-center px-6 sm:pr-0 bg-slate-800 text-white">
+        <div className="flex justify-between items-center py-2 sm:py-0 px-6 sm:pr-0 bg-slate-800 text-white">
             <div className="logo ml-4 flex-1 flex justify-start items-center">
                 {/* <Link href="/" className="p-4 rounded-md"> */}
                 <Image src={logo} width={50} height={50} />
