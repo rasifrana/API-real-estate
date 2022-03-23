@@ -2,15 +2,44 @@ import { FaBed, FaBath } from 'react-icons/fa';
 import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
+import Image from 'next/image';
+
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 import { baseUrl, fetchApi } from '../../utils/fetchApi';
-import ImageScrollBar from '../../components/ImageScrollBar';
+// import ImageScrollBar from '../../components/ImageScrollBar';
 
 
 
 const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => (
     <div className='max-width mx-auto sm:p-4 p-0'>
-        {photos && <ImageScrollBar data={photos} />}
+        <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+        >
+            {photos.map((item) => (
+                <SwiperSlide key={item.id}>
+                    <div className=' overflow-hidden p-1 rounded-2xl'>
+                        <Image placeholder="blur" blurDataURL={item.url} src={item.url} width={1000} height={500} sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px" className=' object-cover' />
+                    </div>
+                </SwiperSlide>
+            ))}
+        </Swiper>
         <div className='p-6'>
             <div className="w-full flex justify-between items-center">
                 <div className="flex pt-2 items-center">

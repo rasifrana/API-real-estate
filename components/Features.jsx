@@ -1,4 +1,5 @@
 import { AiOutlineHome } from 'react-icons/ai';
+import Swip from './Swiper';
 
 
 const Features = () => {
@@ -42,7 +43,7 @@ const Features = () => {
 
             </div>
 
-
+            <Swip />
 
         </section>
     );
