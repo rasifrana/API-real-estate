@@ -15,7 +15,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
 
                     <Image src={coverPhoto ? coverPhoto.url : DefaultHome} width={400} height={350} className=" shadow-lg rounded-t-3xl object-cover" alt="house" />
 
-                    <div className="w-full shadow-2xl rounded-3xl -mt-12 bg-white p-3 " style={{ maxWidth: '400px' }}>
+                    <div className="w-full shadow-2xl rounded-3xl -mt-12 bg-white z-10 p-3 " style={{ maxWidth: '400px' }}>
                         <div className="flex pt-2 items-center justify-between">
                             <div className="flex flex-2 items-center justify-center mb-6">
                                 <div className="pr-3 text-green-400">
